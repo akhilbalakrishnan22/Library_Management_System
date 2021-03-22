@@ -218,16 +218,21 @@ public class AddBook extends javax.swing.JFrame {
         String publisher = bPublisher.getText();
         String price = bPrice.getText();
 //        System.out.println(id+" "+title+" "+author+" "+isbn+" "+publisher+" "+price);
-
-        try{
-            String sql = "insert into books(Book_id, Title, Author, Isbn, Publisher, Price) values('"+id+"', '"+title+"', '"+author+"', '"+isbn+"', '"+publisher+"', '"+price+"')";
-            ps = ConnectionClass.getConnection().prepareStatement(sql);
-            ps.executeUpdate();
-            JOptionPane.showMessageDialog(this, "New book added successfully.");
-            setFieldsNull();
+        
+        if(id.isEmpty() || title.isEmpty() || author.isEmpty() || isbn.isEmpty() || publisher.isEmpty() || price.isEmpty()){
+            JOptionPane.showMessageDialog(this, "Enter book details.");
         }
-        catch(SQLException e){
-            System.out.println(e);
+        else{
+            try{
+                String sql = "insert into books(Book_id, Title, Author, Isbn, Publisher, Price) values('"+id+"', '"+title+"', '"+author+"', '"+isbn+"', '"+publisher+"', '"+price+"')";
+                ps = ConnectionClass.getConnection().prepareStatement(sql);
+                ps.executeUpdate();
+                JOptionPane.showMessageDialog(this, "New book added successfully.");
+                setFieldsNull();
+            }
+            catch(SQLException e){
+                System.out.println(e);
+            }
         }
     }//GEN-LAST:event_addBtnMouseClicked
 

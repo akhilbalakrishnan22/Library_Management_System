@@ -5,8 +5,6 @@
  */
 package library.management.system;
 
-import java.awt.Color;
-
 /**
  *
  * @author akhil

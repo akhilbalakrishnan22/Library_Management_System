@@ -265,7 +265,10 @@ public class AddUser extends javax.swing.JFrame {
 //        System.out.println(id+ " " +name+ " " +course+" " +year+" "+ sem +" "+ username+" "+ password);
         String confirmPassword = sCPassword.getText();
         
-        if(username.isEmpty() && password.isEmpty()){
+        if(id.isEmpty()|| name.isEmpty() || course.isEmpty() || year.isEmpty() || sem.isEmpty()){
+            JOptionPane.showMessageDialog(this, "Enter student details.");
+        }
+        else if(username.isEmpty() && password.isEmpty()){
             JOptionPane.showMessageDialog(this, "Username and password is compulsory");
         }
         else{
