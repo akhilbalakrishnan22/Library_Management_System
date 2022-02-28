@@ -1,4 +1,5 @@
 # Library_Management_System
+## Mini Project
 Simple library management system using Java, Mysql, Swing for GUI.<br>
 Simple Java project for students as beginners in java.
 
