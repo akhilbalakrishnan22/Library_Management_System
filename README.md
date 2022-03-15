@@ -3,7 +3,7 @@
 Simple library management system using Java, Mysql, Swing for GUI.<br>
 Simple Java project for students as beginners in java.
 
-## What i learned?
+## What did I learn?
 
 - How use Java Swing to code desktop application ui
 - To use MySQL as backend with XAMPP(Apache, MySQL, PHP and Perl)
